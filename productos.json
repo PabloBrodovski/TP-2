@@ -1,0 +1,62 @@
+[
+    {
+      "id": "pc1",
+      "nombre": "Ryzen 3",
+      "imagen": "./img/ryzen-3.jpg",
+      "descripcion": "Pc Gamer Amd Ryzen 3, 3200g, 8gb, Ddr4, Ssd 240gb",
+      "descripcionLarga": "Computadora AMD Ryzen 3, 4 nuclos, 4.0 GHZ, Mother B450, Tarjeta grafica integrada Radeom Vega 8, memoria RAM DDR4 8GB, Disco sólido de 240GB.",
+      "precio": 250000,
+      "estrellas":"⭐⭐⭐"
+
+    },
+  
+    {
+      "id": "pc2",
+      "nombre": "Ryzen 5",
+      "imagen": "./img/ryzen-5.jpg",
+      "descripcion": "Pc Gamer Amd Ryzen 5, 4750g, 8gb, Ddr4, Ssd 240gb",
+      "descripcionLarga": "Computadora AMD Ryzen 5, 6 nuclos, 4.4 GHZ, Mother MSI A320M, Tarjeta grafica integrada Radeom Vega 8, memoria RAM DDR 4 16GB, Disco sólido de 240GB.",
+      "precio": 350000,
+      "estrellas":"⭐⭐⭐"
+    },
+  
+    {
+      "id": "pc3",
+      "nombre": "Ryzen 7",
+      "imagen": "./img/ryzen-7.jpg",
+      "descripcion": "Pc Gamer Amd Ryzen 7, 5700g, 16gb, Ddr4, Ssd 480gb",
+      "descripcionLarga": "Computadora AMD Ryzen 7, 12 nuclos, 4.8 GHZ, Mother MSI A320M, Tarjeta grafica integrada Radeom Vega 8, memoria RAM DDR 4 16GB, Disco sólido de 480 GB.",
+      "precio": 450000,
+      "estrellas":"⭐⭐⭐⭐"
+    },
+  
+    {
+      "id": "pc4",
+      "nombre": "Intel i5",
+      "imagen": "./img/Intel-I5.jpg",
+      "descripcion": "Pc Gamer Intel I5, 12400f, 16gb, 1tb, Ssd, Rtx 3060",
+      "descripcionLarga": "Computadora Intel i5 12400, 4.9 GHZ, Cache 12MB, Mother H410, memoria RAM DDR 4 16GB, Disco sólido de 480 GB.",
+      "precio": 600000,
+      "estrellas":"⭐⭐⭐⭐"
+    },
+  
+    {
+      "id": "pc5",
+      "nombre": "Intel i7",
+      "imagen": "./img/Intel-I7.jpg",
+      "descripcion": "Pc Gamer Core I7, 12700k, 16gb, 64gb, Ddr5, Rtx 3060",
+      "descripcionLarga": "Computadora Intel i7 12700, 4.9 GHZ, Cache 12MB, Mother H510, Video GEFORCE NVIDIA G210, memoria RAM DDR 4 16GB, Disco sólido de 480 GB.",
+      "precio": 800000,
+      "estrellas":"⭐⭐⭐⭐⭐"
+    },
+  
+    {
+      "id": "pc6",
+      "nombre": "Intel i9",
+      "imagen": "./img/Intel-I9.jpg",
+      "descripcion": "Pc Gamer Core I9, 12900k, 16gb, 64gb, Ddr5, Rtx 3090",
+      "descripcionLarga": "Computadora Intel i9 12900, 4.9 GHZ, Cache 12MB, Mother H510, Video GEFORCE NVIDIA GTX 1660, memoria RAM DDR 4 16GB, Disco sólido de 480 GB.",
+      "precio": 1100000,
+      "estrellas":"⭐⭐⭐⭐⭐"
+    }
+  ]
