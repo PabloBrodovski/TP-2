@@ -1,53 +1,55 @@
-fetch("productos.json").then((response) => response.json()).then((json) => {
-    // console.log(json);
-    json.forEach((producto) => console.log(producto?.nombre));
+const listaProductos = document.querySelector("#lista-de-productos");
+let productos;
 
-    localStorage.setItem("productos", JSON.stringify(json));
-  });
+const listaDeProductos = async () => {
+  localStorage.clear();
+  listaProductos.innerHTML = "";
 
-  const jsonProductos = JSON.parse(localStorage.getItem("productos"));
+  productos = localStorage.getItem("productos");
 
-  const listaDeProductos = document.querySelector("#lista-de-productos");
+  if (productos == null) {
+    const response = await fetch("productos.json");
+    productos = await response.json();
 
+    localStorage.setItem("productos", JSON.stringify(productos));
+  }
 
-  
-  const productoElegido = [];
+  if (typeof productos == "string") {
+    productos = JSON.parse(productos);
+  }
 
-  jsonProductos.forEach((product) => {
-    let content = document.createElement("div");
-    content.className = "card";
-    content.innerHTML = `
+  productos.forEach(cargarProductos);
+};
+
+const cargarProductos = (product) => {
+//   const foto = product.imagen ?? "pawel-szvmanski-oUOxOSPbcJk-unsplash.jpg";
+  const productoHTML = `
+    <div class="card">
         <h3>${product.nombre}</h3>
         <img class="imagen" src="${product.imagen}">
         <p class="description">${product.descripcion}</p>
         <p class="price">$ ${product.precio}</p>
-    `;
+        <button class="ver" id="${product.id}">Ver</button>
+    </div>
+  `;
 
-    listaDeProductos.append(content);
+  listaProductos.innerHTML += productoHTML;
+};
 
-    let ver = document.createElement("button");
-    ver.innerText = "Ver";
-    content.append(ver);
-    ver.className = "ver";
+listaDeProductos();
 
-    ver.addEventListener("click", () => {
-      productoElegido.push({
-        id: product.id,
-        nombre: product.nombre,
-        imagen: product.imagen,
-        descripcion: product.descripcion,
-        descripcionLarga: product.descripcionLarga,
-        precio: product.precio,
-        estrellas: product.estrellas,
-      });
-
-      localStorage.setItem("producto", JSON.stringify(productoElegido));
-
-      console.log(productoElegido)
-
-      location.href ="producto.html";
-
-    });
-
+document.addEventListener("click", (event) => {
+    console.log(event.target.tagName == "BUTTON");
+    sessionStorage.setItem("id", event.target.id);
+    window.location = "producto.html";
   });
 
+  function mostrarEstrellas (estrellas) {
+    const estrellasLlenas = estrellas.length;
+    const estrellasVacias = 5 - estrellasLlenas;
+
+const estrellasHTML = '<p class="estrella-llena">⭐</p>'.repeat(estrellasLlenas) +
+'<p class="estrella-vacia">⭐</p>'.repeat(estrellasVacias);
+
+return `<p class="puntuacion-estrellas">${estrellasHTML}</p>`;
+};
